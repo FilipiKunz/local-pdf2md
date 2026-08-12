@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.mineru-*/
+
+# User documents and generated output
+/*.pdf
+/*.md
+!/README.md
+/*_assets/
+
+# Local tools and editor files
+.DS_Store
+.idea/
+.vscode/
