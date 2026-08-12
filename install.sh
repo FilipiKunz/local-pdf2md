@@ -16,7 +16,9 @@ if not ((3, 10) <= sys.version_info[:2] <= (3, 13)):
 PY
 
 python3 -m pip install --upgrade uv ninja
-python3 -m uv venv "${HOME}/.venvs/local-pdf2md" --python python3
+if [[ ! -x "${HOME}/.venvs/local-pdf2md/bin/python" ]]; then
+    python3 -m uv venv "${HOME}/.venvs/local-pdf2md" --python python3
+fi
 python3 -m uv pip install \
     --python "${HOME}/.venvs/local-pdf2md/bin/python" \
     --upgrade \
